@@ -12,6 +12,9 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var rateButton: UIButton!
+    @IBOutlet weak var mapButton: UIButton!
+    
     var restaurant: Restaurant?
     
     override func viewDidLoad() {
@@ -19,14 +22,37 @@ class DetailViewController: UIViewController {
         
         imageView.image = UIImage(named: restaurant?.image ?? "Нет изображения")
         setupTableView()
+        setupButton()
+    }
+    
+    @IBAction func rateButtonAction(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Rate", bundle: nil)
+        let rateVC = storyBoard.instantiateViewController(withIdentifier: "Rate") as! Rate
+        rateVC.completion = { [weak self] (imageName) in
+            self?.rateButton.setImage(UIImage(named: imageName), for: .normal)
+        }
+        navigationController?.present(rateVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func mapsButtonAction(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "Map", bundle: nil)
+        let mapVC = storyBoard.instantiateViewController(withIdentifier: "Map") as! Map
+        mapVC.restaurant = self.restaurant 
+        
+        navigationController?.pushViewController(mapVC, animated: true)
     }
     
     private func setupTableView() {
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         navigationItem.title = restaurant?.name
-        
         tableView.estimatedRowHeight = 38
         tableView.rowHeight = UITableView.automaticDimension
+    }
+    
+    private func setupButton() {
+        let buttons = [rateButton, mapButton]
+        
+        buttons.forEach({$0?.layer.cornerRadius = 5; $0?.layer.borderWidth = 1; $0?.layer.borderColor = UIColor.white.cgColor })
     }
 }
 

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fLW-kI-PTK">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rate-->
+        <scene sceneID="iNh-mv-Fki">
+            <objects>
+                <viewController storyboardIdentifier="Rate" id="fLW-kI-PTK" customClass="Rate" customModule="workWithTableView_SwiftBook_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e6M-XW-BPa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rateBackground" translatesAutoresizingMaskIntoConstraints="NO" id="9ml-48-cNl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            </imageView>
+                            <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqZ-z0-OMW">
+                                <rect key="frame" x="354" y="54" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AKH-YI-Jmk"/>
+                                    <constraint firstAttribute="width" secondItem="zqZ-z0-OMW" secondAttribute="height" multiplier="1:1" id="Tqp-GZ-2VG"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="backButtonToVC:" destination="fLW-kI-PTK" eventType="touchUpInside" id="6GX-BL-R5B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Как Вам у нас ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDf-sn-QrO">
+                                <rect key="frame" x="99" y="173" width="216" height="38.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bKg-k2-waU">
+                                <rect key="frame" x="64.5" y="277" width="285" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Qg-6h-HUl">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                        <state key="normal" image="bad"/>
+                                        <connections>
+                                            <action selector="rateRestourant:" destination="fLW-kI-PTK" eventType="touchUpInside" id="aga-Y8-zeT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKV-8h-nFY">
+                                        <rect key="frame" x="100" y="0.0" width="85" height="85"/>
+                                        <state key="normal" image="good"/>
+                                        <connections>
+                                            <action selector="rateRestourant:" destination="fLW-kI-PTK" eventType="touchUpInside" id="xuA-FI-FJX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gub-2D-0IR">
+                                        <rect key="frame" x="200" y="0.0" width="85" height="85"/>
+                                        <state key="normal" image="brilliant"/>
+                                        <connections>
+                                            <action selector="rateRestourant:" destination="fLW-kI-PTK" eventType="touchUpInside" id="lFg-Fd-W85"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bKg-k2-waU" firstAttribute="top" secondItem="CDf-sn-QrO" secondAttribute="bottom" constant="65.5" id="GqH-Ha-kRV"/>
+                            <constraint firstItem="Beh-SS-QlS" firstAttribute="trailing" secondItem="zqZ-z0-OMW" secondAttribute="trailing" constant="10" id="ROf-gA-6eZ"/>
+                            <constraint firstItem="bKg-k2-waU" firstAttribute="centerX" secondItem="CDf-sn-QrO" secondAttribute="centerX" id="ddW-oN-NSz"/>
+                            <constraint firstItem="CDf-sn-QrO" firstAttribute="top" secondItem="Beh-SS-QlS" secondAttribute="top" constant="129" id="eLD-yb-WYS"/>
+                            <constraint firstItem="CDf-sn-QrO" firstAttribute="centerX" secondItem="9ml-48-cNl" secondAttribute="centerX" id="gBE-MB-0b9"/>
+                            <constraint firstItem="Beh-SS-QlS" firstAttribute="trailing" secondItem="9ml-48-cNl" secondAttribute="trailing" id="o6V-aJ-8tn"/>
+                            <constraint firstItem="9ml-48-cNl" firstAttribute="leading" secondItem="Beh-SS-QlS" secondAttribute="leading" id="y5U-bH-GNv"/>
+                            <constraint firstItem="zqZ-z0-OMW" firstAttribute="top" secondItem="Beh-SS-QlS" secondAttribute="top" constant="10" id="y9l-2Z-GBT"/>
+                            <constraint firstItem="Beh-SS-QlS" firstAttribute="bottom" secondItem="9ml-48-cNl" secondAttribute="bottom" id="yE4-ox-nFO"/>
+                            <constraint firstItem="9ml-48-cNl" firstAttribute="top" secondItem="Beh-SS-QlS" secondAttribute="top" constant="-44" id="zCu-OZ-9Lc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Beh-SS-QlS"/>
+                    </view>
+                    <connections>
+                        <outlet property="badButton" destination="4Qg-6h-HUl" id="Yiw-wL-4S3"/>
+                        <outlet property="brillingButton" destination="Gub-2D-0IR" id="rcl-aJ-L5M"/>
+                        <outlet property="goodButton" destination="HKV-8h-nFY" id="Er5-AL-5xW"/>
+                        <outlet property="ratingStackView" destination="bKg-k2-waU" id="iGe-0H-HUc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zbD-UB-goc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bad" width="85" height="85"/>
+        <image name="brilliant" width="85" height="85"/>
+        <image name="close" width="50" height="50"/>
+        <image name="good" width="85" height="85"/>
+        <image name="rateBackground" width="200" height="286"/>
+    </resources>
+</document>

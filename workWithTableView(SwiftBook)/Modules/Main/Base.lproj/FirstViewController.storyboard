@@ -93,7 +93,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Рестораны" id="BKx-C6-6Yx"/>
+                    <navigationItem key="navigationItem" title="Рестораны" id="BKx-C6-6Yx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="aP3-xU-JJN">
+                            <connections>
+                                <action selector="addBarButtonItemAction:" destination="BYZ-38-t0r" id="0aL-TD-N49"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Fiy-c0-ehD" id="0vF-AT-7bP"/>
                     </connections>
