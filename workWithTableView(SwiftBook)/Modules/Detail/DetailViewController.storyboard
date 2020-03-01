@@ -12,7 +12,6 @@
         <!--Detail View Controller-->
         <scene sceneID="LKW-BT-fAz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3BE-jL-z5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DetailViewController" id="qTd-ee-MyY" customClass="DetailViewController" customModule="workWithTableView_SwiftBook_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hvT-O7-1ky">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -78,7 +77,7 @@
                                     <constraint firstAttribute="width" secondItem="6zY-Ov-zgJ" secondAttribute="height" multiplier="1:1" id="OKL-jp-gyi"/>
                                     <constraint firstAttribute="height" constant="60" id="l6H-9V-rtI"/>
                                 </constraints>
-                                <state key="normal" image="good"/>
+                                <state key="normal" image="bad"/>
                                 <connections>
                                     <action selector="rateButtonAction:" destination="qTd-ee-MyY" eventType="touchUpInside" id="X8j-DZ-gdk"/>
                                 </connections>
@@ -116,12 +115,13 @@
                         <outlet property="tableView" destination="jVI-I6-Hi0" id="Oed-9q-NUD"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3BE-jL-z5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1408.6956521739132" y="-237.05357142857142"/>
         </scene>
     </scenes>
     <resources>
-        <image name="good" width="85" height="85"/>
+        <image name="bad" width="85" height="85"/>
         <image name="map" width="50" height="50"/>
     </resources>
 </document>
