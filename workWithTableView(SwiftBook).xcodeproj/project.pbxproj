@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EA01FCC240CD8F900BB1F05 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA01FCB240CD8F900BB1F05 /* CoreDataStack.swift */; };
+		2EA01FD2240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EA01FD0240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodeld */; };
 		2EEA47512407AD4C00EE8706 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEA47502407AD4C00EE8706 /* Rate.swift */; };
 		2EEA47532407AD7700EE8706 /* Rate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEA47522407AD7700EE8706 /* Rate.storyboard */; };
 		2EEA47562407DA6900EE8706 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEA47552407DA6900EE8706 /* Map.swift */; };
@@ -23,11 +25,12 @@
 		2EEB11EF240668050081C036 /* EateriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB11EE240668050081C036 /* EateriesTableViewCell.swift */; };
 		2EEB11F224069F090081C036 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB11F124069F090081C036 /* DetailViewController.swift */; };
 		2EEB11F424069F2C0081C036 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEB11F324069F2C0081C036 /* DetailViewController.storyboard */; };
-		2EEB11F82406AA4F0081C036 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB11F72406AA4F0081C036 /* Restaurant.swift */; };
 		2EEB11FB2406B5D30081C036 /* EateryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB11FA2406B5D30081C036 /* EateryDetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EA01FCB240CD8F900BB1F05 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		2EA01FD1240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "workWithTableView(SwiftBook).xcdatamodel"; sourceTree = "<group>"; };
 		2EEA47502407AD4C00EE8706 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		2EEA47522407AD7700EE8706 /* Rate.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Rate.storyboard; sourceTree = "<group>"; };
 		2EEA47552407DA6900EE8706 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
@@ -46,7 +49,6 @@
 		2EEB11EE240668050081C036 /* EateriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateriesTableViewCell.swift; sourceTree = "<group>"; };
 		2EEB11F124069F090081C036 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2EEB11F324069F2C0081C036 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
-		2EEB11F72406AA4F0081C036 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		2EEB11FA2406B5D30081C036 /* EateryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateryDetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EA01FCA240CD8CE00BB1F05 /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				2EA01FCB240CD8F900BB1F05 /* CoreDataStack.swift */,
+				2EA01FD0240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodeld */,
+			);
+			path = CoreDataStack;
+			sourceTree = "<group>";
+		};
 		2EEA474F2407AD0900EE8706 /* Rate */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +102,7 @@
 		2EEB11BF24064A590081C036 = {
 			isa = PBXGroup;
 			children = (
+				2EA01FCA240CD8CE00BB1F05 /* CoreDataStack */,
 				2EEB11CA24064A590081C036 /* workWithTableView(SwiftBook) */,
 				2EEB11DD24064AC50081C036 /* Resourses */,
 				2EEB11C924064A590081C036 /* Products */,
@@ -226,17 +238,8 @@
 		2EEB11F52406A9B60081C036 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2EEB11F62406A9D00081C036 /* Restaurant */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		2EEB11F62406A9D00081C036 /* Restaurant */ = {
-			isa = PBXGroup;
-			children = (
-				2EEB11F72406AA4F0081C036 /* Restaurant.swift */,
-			);
-			path = Restaurant;
 			sourceTree = "<group>";
 		};
 		2EEB11F92406B5920081C036 /* Cell */ = {
@@ -325,12 +328,13 @@
 				2EEA475F2407F3D300EE8706 /* AddRestaurant.swift in Sources */,
 				2EEA47562407DA6900EE8706 /* Map.swift in Sources */,
 				2EEB11CE24064A590081C036 /* FirstViewController.swift in Sources */,
+				2EA01FCC240CD8F900BB1F05 /* CoreDataStack.swift in Sources */,
 				2EEB11EF240668050081C036 /* EateriesTableViewCell.swift in Sources */,
 				2EEB11CC24064A590081C036 /* AppDelegate.swift in Sources */,
-				2EEB11F82406AA4F0081C036 /* Restaurant.swift in Sources */,
 				2EEB11F224069F090081C036 /* DetailViewController.swift in Sources */,
 				2EEB11EB24064CEE0081C036 /* UIViewControllerStoryboard.swift in Sources */,
 				2EEA47512407AD4C00EE8706 /* Rate.swift in Sources */,
+				2EA01FD2240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodeld in Sources */,
 				2EEB11FB2406B5D30081C036 /* EateryDetailCell.swift in Sources */,
 				2EEB11E924064CA50081C036 /* StoryboardInitializable.swift in Sources */,
 			);
@@ -534,6 +538,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2EA01FD0240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2EA01FD1240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodel */,
+			);
+			currentVersion = 2EA01FD1240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodel */;
+			path = "workWithTableView(SwiftBook).xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2EEB11C024064A590081C036 /* Project object */;
 }

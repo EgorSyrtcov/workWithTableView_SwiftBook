@@ -211,7 +211,7 @@
                     <connections>
                         <outlet property="adressTextField" destination="FqH-qM-FbO" id="eCZ-dM-KC3"/>
                         <outlet property="imageView" destination="aKH-ne-iJd" id="QcB-iK-AT6"/>
-                        <outlet property="nameTextField" destination="FqH-qM-FbO" id="HqY-rn-o0A"/>
+                        <outlet property="nameTextField" destination="wMf-kY-FSe" id="tOB-pf-rul"/>
                         <outlet property="noButton" destination="aDO-31-yWo" id="XE1-R1-rKA"/>
                         <outlet property="typeTextField" destination="cfv-TC-RHw" id="mWF-WZ-pwS"/>
                         <outlet property="yesButton" destination="cDk-TD-nh5" id="J8f-sc-ker"/>

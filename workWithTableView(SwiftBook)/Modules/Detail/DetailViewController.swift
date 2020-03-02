@@ -20,7 +20,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.image = UIImage(named: restaurant?.image ?? "Нет изображения")
+        imageView.image = UIImage(data: restaurant!.image! as Data)
         setupTableView()
         setupButton()
     }

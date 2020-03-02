@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddRestaurant: UITableViewController {
 
@@ -16,6 +17,7 @@ class AddRestaurant: UITableViewController {
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var yesButton: UIButton!
     @IBOutlet weak var noButton: UIButton!
+    private var isVisited = false
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
@@ -54,20 +56,36 @@ class AddRestaurant: UITableViewController {
     
     @IBAction func saveBarButtonItem(_ sender: UIBarButtonItem) {
         if nameTextField.text == "" || adressTextField.text == "" || typeTextField.text == "" {
-            print("Не все поля заполнены")
+            let alertController = UIAlertController(title: "", message: "Не все поля заполнены", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alertController.addAction(ok)
+            present(alertController, animated: true, completion: nil)
         } else {
+            let restaurant = Restaurant(context: CoreDataStack.context)
+            restaurant.name = nameTextField.text
+            restaurant.location = adressTextField.text
+            restaurant.type = typeTextField.text
+            restaurant.isVisited = isVisited
+            
+            if let image = imageView.image {
+                restaurant.image = image.pngData()
+            }
+            
+            CoreDataStack.saveContext()
+            
             navigationController?.popViewController(animated: true)
         }
-        
     }
     
     @IBAction func togglesVisitedPressed(_ sender: UIButton) {
         if sender == yesButton {
             sender.backgroundColor = #colorLiteral(red: 0.07627386312, green: 0.6387022345, blue: 0.04212004142, alpha: 1)
             noButton.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            isVisited = true
         } else {
             sender.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
             yesButton.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            isVisited = false
         }
     }
 }
