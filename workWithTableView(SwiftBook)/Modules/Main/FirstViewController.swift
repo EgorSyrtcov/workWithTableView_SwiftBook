@@ -34,6 +34,20 @@ class FirstViewController: UIViewController {
         setupSearchController()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let userDefaults = UserDefaults.standard
+        let wasIntroWatched = userDefaults.bool(forKey: "wasIntroWatched")
+        
+        guard !wasIntroWatched else { return }
+        
+        let storyBoard = UIStoryboard(name: "Content", bundle: nil)
+        if let pageVC = storyBoard.instantiateViewController(withIdentifier: "PageVC") as? PageVC {
+            present(pageVC, animated: true, completion: nil)
+        }
+    }
+    
     private func setupFetchRequest() {
         let fetchRequest: NSFetchRequest<Restaurant> = Restaurant.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)

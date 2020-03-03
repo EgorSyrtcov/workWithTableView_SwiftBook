@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E739FC7240D28FF006D8E29 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E739FC6240D28FF006D8E29 /* Content.swift */; };
+		2E739FC9240D2958006D8E29 /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E739FC8240D2958006D8E29 /* PageVC.swift */; };
+		2E739FCB240D2984006D8E29 /* Content.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E739FCA240D2984006D8E29 /* Content.storyboard */; };
 		2EA01FCC240CD8F900BB1F05 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA01FCB240CD8F900BB1F05 /* CoreDataStack.swift */; };
 		2EA01FD2240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2EA01FD0240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodeld */; };
 		2EEA47512407AD4C00EE8706 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEA47502407AD4C00EE8706 /* Rate.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E739FC6240D28FF006D8E29 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		2E739FC8240D2958006D8E29 /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		2E739FCA240D2984006D8E29 /* Content.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Content.storyboard; sourceTree = "<group>"; };
 		2EA01FCB240CD8F900BB1F05 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		2EA01FD1240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "workWithTableView(SwiftBook).xcdatamodel"; sourceTree = "<group>"; };
 		2EEA47502407AD4C00EE8706 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
@@ -63,6 +69,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E739FC5240D28DA006D8E29 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				2E739FC6240D28FF006D8E29 /* Content.swift */,
+				2E739FCA240D2984006D8E29 /* Content.storyboard */,
+				2E739FC8240D2958006D8E29 /* PageVC.swift */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
 		2EA01FCA240CD8CE00BB1F05 /* CoreDataStack */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +109,7 @@
 		2EEA47592407EA3700EE8706 /* AddRestaurant */ = {
 			isa = PBXGroup;
 			children = (
+				2EEB11E624064BB60081C036 /* Splash */,
 				2EEA475C2407EA7F00EE8706 /* AddRestaurant.storyboard */,
 				2EEA475E2407F3D300EE8706 /* AddRestaurant.swift */,
 			);
@@ -186,7 +203,7 @@
 				2EEA474F2407AD0900EE8706 /* Rate */,
 				2EEA47542407D9FB00EE8706 /* Map */,
 				2EEA47592407EA3700EE8706 /* AddRestaurant */,
-				2EEB11E624064BB60081C036 /* Splash */,
+				2E739FC5240D28DA006D8E29 /* Page */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -312,6 +329,7 @@
 				2EEB11F424069F2C0081C036 /* DetailViewController.storyboard in Resources */,
 				2EEB11D624064A5C0081C036 /* LaunchScreen.storyboard in Resources */,
 				2EEA475D2407EA7F00EE8706 /* AddRestaurant.storyboard in Resources */,
+				2E739FCB240D2984006D8E29 /* Content.storyboard in Resources */,
 				2EEB11D324064A5C0081C036 /* Assets.xcassets in Resources */,
 				2EEB11D124064A590081C036 /* FirstViewController.storyboard in Resources */,
 				2EEA47582407DA8600EE8706 /* Map.storyboard in Resources */,
@@ -328,10 +346,12 @@
 				2EEA475F2407F3D300EE8706 /* AddRestaurant.swift in Sources */,
 				2EEA47562407DA6900EE8706 /* Map.swift in Sources */,
 				2EEB11CE24064A590081C036 /* FirstViewController.swift in Sources */,
+				2E739FC9240D2958006D8E29 /* PageVC.swift in Sources */,
 				2EA01FCC240CD8F900BB1F05 /* CoreDataStack.swift in Sources */,
 				2EEB11EF240668050081C036 /* EateriesTableViewCell.swift in Sources */,
 				2EEB11CC24064A590081C036 /* AppDelegate.swift in Sources */,
 				2EEB11F224069F090081C036 /* DetailViewController.swift in Sources */,
+				2E739FC7240D28FF006D8E29 /* Content.swift in Sources */,
 				2EEB11EB24064CEE0081C036 /* UIViewControllerStoryboard.swift in Sources */,
 				2EEA47512407AD4C00EE8706 /* Rate.swift in Sources */,
 				2EA01FD2240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodeld in Sources */,

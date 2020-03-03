@@ -16,6 +16,7 @@ class Rate: UIViewController {
     @IBOutlet weak var brillingButton: UIButton!
 
     var completion: ((_ imageName: String) -> Void)?
+    var restaurant: Restaurant?
     
     override func viewDidLoad() {
         super.viewDidLoad()
