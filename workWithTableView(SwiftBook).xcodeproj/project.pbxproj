@@ -29,6 +29,9 @@
 		2EEB11F224069F090081C036 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB11F124069F090081C036 /* DetailViewController.swift */; };
 		2EEB11F424069F2C0081C036 /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEB11F324069F2C0081C036 /* DetailViewController.storyboard */; };
 		2EEB11FB2406B5D30081C036 /* EateryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEB11FA2406B5D30081C036 /* EateryDetailCell.swift */; };
+		2EEFF4A7240FC37900E37F72 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEFF4A6240FC37900E37F72 /* About.swift */; };
+		2EEFF4AA240FC3EE00E37F72 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EEFF4A8240FC3EE00E37F72 /* About.storyboard */; };
+		2EEFF4AC240FC64600E37F72 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEFF4AB240FC64600E37F72 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		2EEB11F124069F090081C036 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2EEB11F324069F2C0081C036 /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		2EEB11FA2406B5D30081C036 /* EateryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateryDetailCell.swift; sourceTree = "<group>"; };
+		2EEFF4A6240FC37900E37F72 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		2EEFF4A9240FC3EE00E37F72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "workWithTableView(SwiftBook)/Modules/Main/Base.lproj/About.storyboard"; sourceTree = "<group>"; };
+		2EEFF4AB240FC64600E37F72 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				2EEB11E624064BB60081C036 /* Splash */,
-				2EEA475C2407EA7F00EE8706 /* AddRestaurant.storyboard */,
 				2EEA475E2407F3D300EE8706 /* AddRestaurant.swift */,
+				2EEA475C2407EA7F00EE8706 /* AddRestaurant.storyboard */,
 			);
 			path = AddRestaurant;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 				2EEA47542407D9FB00EE8706 /* Map */,
 				2EEA47592407EA3700EE8706 /* AddRestaurant */,
 				2E739FC5240D28DA006D8E29 /* Page */,
+				2EEFF4A5240FC34B00E37F72 /* About */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -240,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				2EEB11EA24064CEE0081C036 /* UIViewControllerStoryboard.swift */,
+				2EEFF4AB240FC64600E37F72 /* Color.swift */,
 			);
 			path = UIkit;
 			sourceTree = "<group>";
@@ -265,6 +273,15 @@
 				2EEB11FA2406B5D30081C036 /* EateryDetailCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		2EEFF4A5240FC34B00E37F72 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				2EEFF4A6240FC37900E37F72 /* About.swift */,
+				2EEFF4A8240FC3EE00E37F72 /* About.storyboard */,
+			);
+			path = About;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +347,7 @@
 				2EEB11D624064A5C0081C036 /* LaunchScreen.storyboard in Resources */,
 				2EEA475D2407EA7F00EE8706 /* AddRestaurant.storyboard in Resources */,
 				2E739FCB240D2984006D8E29 /* Content.storyboard in Resources */,
+				2EEFF4AA240FC3EE00E37F72 /* About.storyboard in Resources */,
 				2EEB11D324064A5C0081C036 /* Assets.xcassets in Resources */,
 				2EEB11D124064A590081C036 /* FirstViewController.storyboard in Resources */,
 				2EEA47582407DA8600EE8706 /* Map.storyboard in Resources */,
@@ -348,11 +366,13 @@
 				2EEB11CE24064A590081C036 /* FirstViewController.swift in Sources */,
 				2E739FC9240D2958006D8E29 /* PageVC.swift in Sources */,
 				2EA01FCC240CD8F900BB1F05 /* CoreDataStack.swift in Sources */,
+				2EEFF4AC240FC64600E37F72 /* Color.swift in Sources */,
 				2EEB11EF240668050081C036 /* EateriesTableViewCell.swift in Sources */,
 				2EEB11CC24064A590081C036 /* AppDelegate.swift in Sources */,
 				2EEB11F224069F090081C036 /* DetailViewController.swift in Sources */,
 				2E739FC7240D28FF006D8E29 /* Content.swift in Sources */,
 				2EEB11EB24064CEE0081C036 /* UIViewControllerStoryboard.swift in Sources */,
+				2EEFF4A7240FC37900E37F72 /* About.swift in Sources */,
 				2EEA47512407AD4C00EE8706 /* Rate.swift in Sources */,
 				2EA01FD2240CE3BC00BB1F05 /* workWithTableView(SwiftBook).xcdatamodeld in Sources */,
 				2EEB11FB2406B5D30081C036 /* EateryDetailCell.swift in Sources */,
@@ -377,6 +397,14 @@
 				2EEB11D524064A5C0081C036 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2EEFF4A8240FC3EE00E37F72 /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EEFF4A9240FC3EE00E37F72 /* Base */,
+			);
+			name = About.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

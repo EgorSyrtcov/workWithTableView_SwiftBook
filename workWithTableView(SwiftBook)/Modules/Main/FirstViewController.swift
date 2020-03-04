@@ -138,7 +138,7 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
             CoreDataStack.context.delete(objectToDelete)
             CoreDataStack.saveContext()
         }
-        share.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+        share.backgroundColor = UIColor.blueShara()
         return [delete, share]
     }
 }

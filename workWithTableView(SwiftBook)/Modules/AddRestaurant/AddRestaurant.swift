@@ -79,12 +79,12 @@ class AddRestaurant: UITableViewController {
     
     @IBAction func togglesVisitedPressed(_ sender: UIButton) {
         if sender == yesButton {
-            sender.backgroundColor = #colorLiteral(red: 0.07627386312, green: 0.6387022345, blue: 0.04212004142, alpha: 1)
-            noButton.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            sender.backgroundColor = UIColor.greenButton()
+            noButton.backgroundColor = UIColor.greenButton()
             isVisited = true
         } else {
-            sender.backgroundColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
-            yesButton.backgroundColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            sender.backgroundColor = UIColor.redButton()
+            yesButton.backgroundColor = UIColor.greenButton()
             isVisited = false
         }
     }
