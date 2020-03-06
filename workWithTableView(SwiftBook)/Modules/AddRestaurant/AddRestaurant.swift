@@ -68,15 +68,22 @@ import CoreData
             restaurant.isVisited = isVisited
             
             if let image = imageView.image {
-                restaurant.image = image.pngData()
+                if let data = image.pngData() {
+                let fileName = getDocumentsDirectory().appendingPathComponent("\(restaurant.name!).png")
+                try? data.write(to: fileName)
             }
-            
+        }
             CoreDataStack.saveContext()
             
             navigationController?.popViewController(animated: true)
         }
     }
     
+    func getDocumentsDirectory() -> URL {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return path[0]
+    }
+
     @IBAction func togglesVisitedPressed(_ sender: UIButton) {
         if sender == yesButton {
             sender.backgroundColor = UIColor.greenButton()
@@ -95,11 +102,8 @@ extension AddRestaurant: UIImagePickerControllerDelegate, UINavigationController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         imageView.image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
-        
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         dismiss(animated: true, completion: nil)
     }
-    
-    
 }

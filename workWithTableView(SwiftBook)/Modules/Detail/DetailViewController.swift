@@ -20,9 +20,18 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageView.image = UIImage(data: restaurant!.image! as Data)
+        let dirPath = getDocumentsDirectory()
+        let imageURL = dirPath.appendingPathComponent("\(restaurant!.name!).png")
+        let image = UIImage(contentsOfFile: imageURL.path)
+        
+        imageView.image = image
         setupTableView()
         setupButton()
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return path[0]
     }
     
     @IBAction func rateButtonAction(_ sender: UIButton) {

@@ -96,17 +96,21 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
         cell?.nameLabel.text = restaurant.name
         cell?.locationLabel.text = restaurant.location
         cell?.typeLabel.text = restaurant.type
+       
+        let dirPath = getDocumentsDirectory()
+        let imageURL = dirPath.appendingPathComponent("\(restaurant.name!).png")
+        let image = UIImage(contentsOfFile: imageURL.path)
         
-        //Mark: Default photo string to Data
-        let imageDefaultString = UIImage(named: "photo")
-        let imageToData = imageDefaultString?.pngData()
-        
-        cell?.thumbnailImageView.image = UIImage(data: restaurant.image ?? imageToData! )
+        cell?.thumbnailImageView.image = image
         cell?.thumbnailImageView.layer.cornerRadius = cornerRadiusCell
-        
         cell?.accessoryType = restaurant.isVisited ? .checkmark : .none
         
         return cell!
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return path[0]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -123,8 +127,8 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let share = UITableViewRowAction(style: .normal, title: "Поделиться") { (action, indexPath) in
             let defaultText = "Я сейчас в " + self.restaurants[indexPath.row].location!
-            
-            if let image = UIImage(data: self.restaurants[indexPath.row].image! as Data) {
+         
+            if let image = UIImage(named: "photo") {
                 let activityController = UIActivityViewController(activityItems: [defaultText, image], applicationActivities: nil)
                 self.present(activityController, animated: true, completion: nil)
             }

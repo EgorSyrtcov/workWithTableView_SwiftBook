@@ -56,7 +56,7 @@ extension Map: MKMapViewDelegate {
             annotationView?.canShowCallout = true
         }
         let rightImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        rightImage.image = UIImage(data: restaurant.image! as Data )
+        rightImage.image = UIImage(named: "photo")
         annotationView?.rightCalloutAccessoryView = rightImage
         
         annotationView?.pinTintColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
