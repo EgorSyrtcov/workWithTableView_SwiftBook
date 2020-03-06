@@ -138,12 +138,23 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource {
             self.restaurants.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             
+            self.clearAllFile()
             let objectToDelete = self.fetchResultsController.object(at: indexPath)
             CoreDataStack.context.delete(objectToDelete)
             CoreDataStack.saveContext()
         }
         share.backgroundColor = UIColor.blueShara()
         return [delete, share]
+    }
+    
+    func clearAllFile() {
+        let fileManager = FileManager.default
+        let myDocuments = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+        do {
+            try fileManager.removeItem(at: myDocuments)
+        } catch {
+            return
+        }
     }
 }
 
