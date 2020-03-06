@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class AddRestaurant: UITableViewController {
+ class AddRestaurant: UITableViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -80,11 +80,11 @@ class AddRestaurant: UITableViewController {
     @IBAction func togglesVisitedPressed(_ sender: UIButton) {
         if sender == yesButton {
             sender.backgroundColor = UIColor.greenButton()
-            noButton.backgroundColor = UIColor.greenButton()
+            noButton.backgroundColor = UIColor.grayButtons()
             isVisited = true
         } else {
             sender.backgroundColor = UIColor.redButton()
-            yesButton.backgroundColor = UIColor.greenButton()
+            yesButton.backgroundColor = UIColor.grayButtons()
             isVisited = false
         }
     }
@@ -93,9 +93,13 @@ class AddRestaurant: UITableViewController {
 extension AddRestaurant: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         imageView.image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         dismiss(animated: true, completion: nil)
     }
+    
+    
 }
